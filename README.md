@@ -1,2 +1,3 @@
-# LangNav
-Codebase for LangNav paper
+#  LangNav: Language as a Perceptual Representation for Navigation ([Paper](https://arxiv.org/pdf/2310.07889), [MIT News](https://news.mit.edu/2024/researchers-use-large-language-models-to-help-robots-navigate-0612))
+
+The author is recalling the server password...
