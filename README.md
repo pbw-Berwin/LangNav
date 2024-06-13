@@ -5,7 +5,7 @@ LangNav is an LLM-based navigation agent which performs multi-step navigation en
 
 **LangNav: Language as a Perceptual Representation for Navigation**
 
-[Bowen Pan](https://people.csail.mit.edu/bpan/), [Rameswar Panda](https://rpand002.github.io/), [SouYoung Jin](https://souyoungjin.github.io/), [Rogerio Feris](https://www.rogerioferis.org/), [Aude Oliva](http://olivalab.mit.edu/), [Phillip Isola](https://web.mit.edu/phillipi/) [Yoon Kim](https://people.csail.mit.edu/yoonkim/)
+[Bowen Pan](https://people.csail.mit.edu/bpan/), [Rameswar Panda](https://rpand002.github.io/), [SouYoung Jin](https://souyoungjin.github.io/), [Rogerio Feris](https://www.rogerioferis.org/), [Aude Oliva](http://olivalab.mit.edu/), [Phillip Isola](https://web.mit.edu/phillipi/), [Yoon Kim](https://people.csail.mit.edu/yoonkim/)
 
 *NAACL 2024 (Findings)*
 
