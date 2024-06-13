@@ -4,8 +4,11 @@
 LangNav is an LLM-based navigation agent which performs multi-step navigation end-to-end via textual descriptions of the scene. The language-based perceptual representation makes LangNav more data efficient compared to VL models. With only a few language-based trajectories from a R2R environment, we use GPT-4 to efficiently generate a huge amount of synthetic training data. A smaller language model (LLaMA2-7B) can then be trained on these synthetic data and do the task. In this repo, we provide the inference code, the model, and the training dataset we used for the paper:
 
 **LangNav: Language as a Perceptual Representation for Navigation**
+
 [Bowen Pan](https://people.csail.mit.edu/bpan/), [Rameswar Panda](https://rpand002.github.io/), [SouYoung Jin](https://souyoungjin.github.io/), [Rogerio Feris](https://www.rogerioferis.org/), [Aude Oliva](http://olivalab.mit.edu/), [Phillip Isola](https://web.mit.edu/phillipi/) [Yoon Kim](https://people.csail.mit.edu/yoonkim/)
+
 *NAACL 2024 (Findings)*
+
 [[Paper](https://arxiv.org/pdf/2310.07889)][[GitHub](https://github.com/pbw-Berwin/LangNav)][[MIT News](https://news.mit.edu/2024/researchers-use-large-language-models-to-help-robots-navigate-0612)]
 
 ## Prerequisites
