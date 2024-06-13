@@ -1,25 +1,26 @@
-exp_name="gpt-4_synthetic_sim_2k_real_100_llama2"
+model_name="bpan/LangNav-Sim2k-Llama2"
 
-collect_flag="
+evaluation_flags="
 --maxAction 15
 --batchSize 16
 --data_path ./img_features/r2r_blip_DETR_vis2text
 --history_first True
---exp_name $exp_name
+--model_name_or_path $model_name
 "
 
-checkpoint_path="./outputs/$exp_name/checkpoint-520/"
+data_splits=("val_seen" "val_unseen")
 
-model_and_data="
-  --model_name_or_path $checkpoint_path
-  --data_split val_seen
-"
+# Loop through each data split
+for data_split in "${data_splits[@]}"
+do
+    echo "Evaluating on $data_split"
+    # Adjust the master_port incrementally to avoid conflicts
+    if [ "$data_split" = "val_seen" ]; then
+        port=2005
+    else
+        port=2006
+    fi
 
-torchrun --nproc_per_node=1 --master_port=2005 eval_agent.py $collect_flag $model_and_data
-
-model_and_data="
-  --model_name_or_path $checkpoint_path
-  --data_split val_unseen
-"
-
-torchrun --nproc_per_node=1 --master_port=2006 eval_agent.py $collect_flag $model_and_data
+    # Run the evaluation command
+    torchrun --nproc_per_node=1 --master_port=$port eval_agent.py --data_split $data_split $evaluation_flags
+done
